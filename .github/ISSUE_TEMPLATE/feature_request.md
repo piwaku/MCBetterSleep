@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest a new feature
-title: ''
+title: "[Feature] TITLE HERE"
 labels: Suggestion
 assignees: Nuytemans-Dieter
 

@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a potential bug (unexpected behavior or console error)
-title: ''
+title: "[BUG] TITLE HERE"
 labels: Potential bug
 assignees: Nuytemans-Dieter
 
