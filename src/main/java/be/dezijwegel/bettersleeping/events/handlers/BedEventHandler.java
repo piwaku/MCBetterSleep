@@ -7,6 +7,7 @@ import be.dezijwegel.bettersleeping.messaging.Messenger;
 import be.dezijwegel.bettersleeping.permissions.BypassChecker;
 import be.dezijwegel.bettersleeping.permissions.SleepDelayChecker;
 import be.dezijwegel.bettersleeping.runnables.SleepersRunnable;
+import be.dezijwegel.bettersleeping.timechange.TimeSetter;
 import be.dezijwegel.bettersleeping.util.SleepStatus;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -79,6 +80,11 @@ public class BedEventHandler implements Listener, Reloadable {
             event.setCancelled(true);
             messenger.sendMessage(player, "sleep_spam", new MsgEntry("<time>", "" + delay));
             return;
+        }
+
+        if (player.getWorld().getTime() < TimeSetter.TIME_RAIN_NIGHT && player.getWorld().hasStorm())
+        {
+            messenger.sendMessage(player, "You can only sleep during the night. Skipping a storm is not possible.");
         }
 
         // Checks any reason for bypassing, including afk players and vanished players

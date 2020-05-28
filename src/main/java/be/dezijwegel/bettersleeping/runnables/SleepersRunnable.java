@@ -215,6 +215,11 @@ public class SleepersRunnable extends BukkitRunnable {
 
         oldTime = newTime;
 
+        if (world.hasStorm() && newTime < TimeChanger.TIME_RAIN_NIGHT)
+        {
+            return;
+        }
+
         // Early return if players can't sleep anyway
         if (newTime < TimeChanger.TIME_RAIN_NIGHT && !world.isThundering())
             return;

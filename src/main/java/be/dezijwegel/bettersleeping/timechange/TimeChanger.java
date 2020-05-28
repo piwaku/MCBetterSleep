@@ -47,9 +47,7 @@ public abstract class TimeChanger {
      */
     public boolean removedStorm(boolean doReset)
     {
-        boolean value = removedStorm;
-        removedStorm = !doReset && removedStorm;
-        return value;
+        return false;
     }
 
 

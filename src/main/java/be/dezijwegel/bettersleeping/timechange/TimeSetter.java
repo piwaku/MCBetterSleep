@@ -38,13 +38,6 @@ public class TimeSetter extends TimeChanger {
             // Reset the counter
             counter = 0;
 
-            if (world.isThundering())
-            {
-                world.setThundering(false);
-                world.setStorm(false);
-                removedStorm = true;
-            }
-
             if(newTime >= TIME_NIGHT)
             {
                 world.setTime(TIME_MORNING);
