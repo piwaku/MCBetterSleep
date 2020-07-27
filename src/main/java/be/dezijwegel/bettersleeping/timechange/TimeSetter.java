@@ -38,7 +38,7 @@ public class TimeSetter extends TimeChanger {
             // Reset the counter
             counter = 0;
 
-            if (world.isThundering())
+            if (world.isThundering() || world.hasStorm())
             {
                 world.setThundering(false);
                 world.setStorm(false);
